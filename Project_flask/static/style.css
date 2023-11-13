@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+
+header {
+  background-color: #BD3437;
+  height: 70px;
+}
+
+h1 {
+  display: inline-block;
+  color:#F2CF82;
+  text-align: left;
+  margin-left: 35px;
+  font-size: 42px;
+  font-family: DM Serif Text, serif;
+  letter-spacing: 3px;
+  text-shadow: 2px 2.5px 3px #662A00;
+}
+
+.topnav {
+  background-color: #BD3437;
+  overflow: hidden;
+}
+
+.topnav a {
+  float: right;
+  color: #F2CF82;
+  text-align: center;
+  text-decoration: none;
+  font-size: 28px;
+  padding: 20px;
+  margin-top: 21px;
+  font-family: Roboto;
+  margin-right: 10px;
+  text-shadow: 2px 2.2px 3px #662A00;
+}
+
+.topnav a:hover {
+  background-color: #F2CF82;
+  color: #A67A68;
+}
+
+.topnav a.active {
+  background-color: #F2CF82;
+  color: #A67A68;
+}
+
+.canvas {
+  background-color: #FFFDBD;
+  margin-left: 150px;
+  margin-right: 150px;
+  margin-top: 44px;
+}
+
+.reservation_button {
+  margin-left: 290px;
+  margin-right: 290px;
+  height: 50px;
+  box-shadow: 5px 5px 6px rgb(145, 97, 64);
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #FFF7D3;
+  border: 4px solid #A67A68;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 33px;
+  font-family: Shrikhand, cursive;
+  color: #7A665D;
+} 

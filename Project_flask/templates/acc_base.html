@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="static/style.css">
+	<title>{% block nav %}Navigation Bar{% endblock %}</title>
+</head>
+<body style="background-color: #FFDD90;">
+  <script type="text/javascript" src="{{ url_for('static', filename='index.js') }}"></script>
+  <header>
+    <div class="topnav" id="navbar">
+      <h1><a class="logo" href="/">TSE'S RESTAURANT</a></h1>
+      <a href="/booknow" id="BookNow">BOOK NOW</a>
+      <!--<div>
+        <a href="/book_as_guest">Book as a Guest</a>
+        <a href="/sign in">Have an Account? Sign in here.</a>
+      </div>-->
+      <a href="/contact" id="Contact">CONTACT</a>
+      <a href="/my_account" id="myAccount">MY ACCOUNT</a>
+    </div>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      {% for message in messages %}
+        <p style="color: red;">
+          {{ message }}
+        </p>
+        {% else %}
+        <p style="color: green;">
+          {{ message }}
+        </p>
+      {% endfor %}
+    {% endif %}
+    {% endwith %}
+    <script type="text/javascript" src="{{ url_for('static', filename='index.js') }}">
+    </script>
+  </header>
+  <br></br>
+  {% block content %}
+  {% endblock %}
+</body>
+</html>
+
