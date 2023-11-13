@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block nav %}Booking{% endblock %}
+
+{% block content %}
+<form method="POST">
+    <div>
+        <h2 align="center">Make a Booking</h2>
+        <label for="date">Date</label>
+        <input type="date"
+               id="date"
+               name="date"
+               placeholder="DDMMYY"
+        />
+        <br></br>
+        <label for="partySize">Party Size</label>
+        <select id="partySize" name="partySize">
+            {% for num in range(1,9) %}
+            <option value="{{ num }}"> {{ num }} </option> <!--dropdown menu to select party size-->
+            {% endfor %}
+        </select>
+        <label for="time">Time</label>
+        <select id="time" name="time">
+        {% for times in time_slots %}
+        <option value="{{ times.start_time }}">{{ times.start_time }}</option> <!--this iterates through 
+                                                                               the timeslots from the database 
+                                                                               and outputs each one as an option
+                                                                               in the dropdown menu-->
+        {% endfor %}
+        </select>
+        <label for="specReq">Special Requests (Optional)</label>
+        <input type="text"
+               id="specReq"
+               name="specReq"
+               placeholder="Enter special request"
+        />
+    </div>
+    <button type='submit'>Confirm</button>
+</form>
+{% endblock %}

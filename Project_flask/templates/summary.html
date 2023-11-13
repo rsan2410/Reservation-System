@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block nav %}Summary{% endblock %}
+
+{% block content %}
+<h2>Summary</h2>
+<p method='GET'>Date: {{ get_date }}</p> <!--an attempt to get form data from auth.py-->
+<p method='GET'>Time: {{ get_time }}</p>
+<p method='GET'>Party Size: {{ get_partySize }}</p>
+<p method='GET'>Special Requests: {{ get_specReq }}</p>
+<form method='POST'>
+	<label for="name">Name:</label>
+	<input id="name" name="name"/>
+	<br></br>
+	<label for="email">Email:</label>
+	<input id="email" name="email"/>
+	<br></br>
+	<button type="submit">Submit booking</button>
+</form>
+{% endblock %}
